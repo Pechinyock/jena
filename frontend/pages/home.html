@@ -1,0 +1,15 @@
+{{define "content"}}
+<section>
+    <div class="row" id="main-screen">
+        <div class="d-grid gap-1" id="descuss-container">
+            <button class="btn btn-primary" 
+                    type="button"
+                    hx-get="/part/descuss/0/yes"
+                    hx-target="#descuss-container">Let's descuss</button>
+        </div>
+    </div>
+</section>
+{{end}}
+{{define "js-incude"}}
+<script src="frontend/static/js/home.js"></script>
+{{end}}

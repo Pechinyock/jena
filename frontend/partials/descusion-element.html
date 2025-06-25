@@ -1,0 +1,23 @@
+<h2 id="question-{{.Num}}"
+    hx-get="/api/joker/{{.Num}}"
+    hx-target="#question-{{.Num}}"
+    hx-trigger="click from:#descuss-button-{{.Num}} delay:0.5s">{{.Question}}</h2>
+
+<div id="descuss-container-{{.Num}}">
+    <button class="btn btn-primary"
+            type="button"
+            id="descuss-button-{{.Num}}"
+            onclick="acceptAnswer('{{.Num}}')"
+            hx-get="/part/descuss/{{.Num}}/yes"
+            hx-target="#next-descuss-container"
+            hx-swap="beforeend">{{.YesText}}</button>
+
+    <button class="btn btn-primary"
+            type="button"
+            id="descuss-button-{{.Num}}"
+            onclick="acceptAnswer('{{.Num}}')"
+            hx-get="/part/descuss/{{.Num}}/no"
+            hx-target="#next-descuss-container"
+            hx-swap="beforeend">{{.NoText}}</button>
+</div>
+<div id="next-descuss-container"></div>
